@@ -35,7 +35,7 @@ builder.Services.AddCors(options =>
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Configuraci�n de Swagger/OpenAPI
+// Configuración de Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -57,4 +57,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // Usa "5000" por defecto si no está configurado el puerto
 app.Run();
