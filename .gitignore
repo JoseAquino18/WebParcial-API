@@ -1,0 +1,11 @@
+# Archivos de configuración de Visual Studio
+.vs/
+.vscode/
+bin/
+obj/
+
+# Archivos de usuario de Visual Studio
+*.user
+*.userosscache
+*.suo
+*.userprefs
