@@ -1,0 +1,6 @@
+@WebParcial_HostAddress = http://localhost:5094
+
+GET {{WebParcial_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
