@@ -44,9 +44,9 @@ var app = builder.Build();
 // Configurar el pipeline HTTP
 //if (app.Environment.IsDevelopment())
 //{
-  //  app.UseSwagger();
- //   app.UseSwaggerUI();
-  //  app.UseCors("AllowAll");
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseCors("AllowAll");
 //}
 //else
 //{
