@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
     //    .AllowCredentials();
 //    });
 
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
@@ -42,16 +42,16 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configurar el pipeline HTTP
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseCors("AllowAll");
-}
-else
-{
+//if (app.Environment.IsDevelopment())
+//{
+  //  app.UseSwagger();
+ //   app.UseSwaggerUI();
+  //  app.UseCors("AllowAll");
+//}
+//else
+//{
     app.UseCors("AllowFrontend");
-}
+//}
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
